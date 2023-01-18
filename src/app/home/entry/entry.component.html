@@ -1,0 +1,28 @@
+<form id="form_login" [formGroup]="Entryform">
+    <h2>Expense Entry</h2>
+    <br>
+    <p>
+        <input type="number" formControlName="amount"  placeholder="Amount" />
+    </p>
+    <p *ngIf="DataArray">
+        
+        <select name="cars" formControlName="category">
+            <option>Category</option>
+            <option *ngFor="let item of DataArray" value="{{item.category}}">{{item.category}}</option>
+          </select>
+    </p>
+   
+    
+    
+    <p>
+        <!-- <label for="">Date</label>&nbsp; -->
+        <input type="date" formControlName="date"  placeholder="Amount" />
+    </p>
+    <p> 
+        
+        <input type="text"  formControlName="description" placeholder="Description" />
+    </p>
+    <p>
+        <button id="submitbutton" type="button" (click)="onSubmit()">Add</button>
+    </p>
+  </form>

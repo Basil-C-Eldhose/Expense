@@ -1,0 +1,41 @@
+
+<form id="form_login" [formGroup]="searchform">
+    <h2>View Expenses</h2>
+    <br>
+    <p> 
+        <label for="">Start Date</label>&nbsp;&nbsp;
+        <input type="date" formControlName="datestart" id="categoryid" placeholder="Category"  />
+    </p>
+    <p> 
+        <label for="">End Date</label>&nbsp;&nbsp;
+        <input type="date" formControlName="dateend" id="categoryid" placeholder="Category"  />
+    </p>
+    <p>
+        <button id="submitbutton" type="button" (click)="onSubmit()">Show</button>
+    </p>
+  </form>
+
+  <div id="demo">
+    <!-- <h1>Responsive Table Design</h1>
+    <h2>UI Table for CMS</h2> -->
+    
+    <!-- Responsive table starts here -->
+    <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+    
+      <div class="table-responsive-vertical">
+  
+      <!-- Table -->
+      <table>
+  
+        <tbody>
+          <tr *ngFor="let item of DataArray;index as j">
+            <td>{{item.description}}</td>
+            <td>₹{{item.amount}}</td>
+            <td >{{DArray[j]}}</td>
+            <td>{{item.category}}</td>
+          </tr>
+      </tbody>
+      </table>
+    </div>
+  </div>
+  

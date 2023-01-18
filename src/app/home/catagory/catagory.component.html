@@ -1,0 +1,12 @@
+
+<form id="form_login" [formGroup]="categoryForm">
+    <h2>Add Category</h2>
+    <br>
+    <p> 
+        
+        <input type="text" formControlName="category" id="categoryid" placeholder="Category" class="input" />
+    </p>
+    <p>
+        <button id="submitbutton" type="button" (click)="onSubmit()">Add</button>
+    </p>
+  </form>
